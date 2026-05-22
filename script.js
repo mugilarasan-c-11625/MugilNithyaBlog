@@ -43,11 +43,6 @@ function updateCountdown() {
   if (el('h-mins'))   el('h-mins').textContent   = pad(mins);
   if (el('h-secs'))   el('h-secs').textContent   = pad(secs);
 
-  // Section countdown (if present)
-  if (el('cd-days'))  el('cd-days').textContent  = pad(days);
-  if (el('cd-hours')) el('cd-hours').textContent = pad(hours);
-  if (el('cd-mins'))  el('cd-mins').textContent  = pad(mins);
-  if (el('cd-secs'))  el('cd-secs').textContent  = pad(secs);
 }
 
 updateCountdown();

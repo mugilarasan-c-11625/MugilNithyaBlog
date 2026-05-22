@@ -317,59 +317,6 @@ body {
 }
 .quote-divider { font-size: 2rem; color: var(--gold); }
 
-/* ── ③ Save The Date ── */
-.std-sec { background: var(--bg); max-width: none; }
-.std-names {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-.std-name {
-  font-family: var(--script);
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  color: var(--accent-deep);
-}
-.std-and {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 1.3rem;
-  color: var(--gold);
-  padding: 0 0.5rem;
-}
-.countdown {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.countdown > div {
-  background: #fff;
-  padding: 1.5rem 1rem;
-  min-width: 110px;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  border-bottom: 3px solid var(--gold);
-}
-.countdown strong {
-  display: block;
-  font-family: var(--serif);
-  font-size: 2.8rem;
-  font-weight: 600;
-  color: var(--accent-deep);
-  line-height: 1;
-}
-.countdown span {
-  display: block;
-  margin-top: 0.5rem;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 0.15em;
-  color: var(--muted);
-}
-
 /* ── ④ Couple Story ── */
 .story-sec { background: var(--bg-soft); max-width: none; }
 .timeline {
@@ -622,10 +569,6 @@ body {
   .hero-countdown > div { min-width: 58px; padding: 0.45rem 0.5rem; }
   .hero-countdown strong { font-size: 1.5rem; }
   /* Other sections */
-  .countdown > div { min-width: 70px; padding: 1rem 0.5rem; }
-  .countdown strong { font-size: 2rem; }
   .event-card.highlight { transform: none; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
-  .gallery-item.main-photo { grid-column: 1 / -1; grid-row: auto; }
-  .std-names { flex-direction: column; gap: 0.5rem; }
 }
