@@ -35,7 +35,7 @@ body {
   text-align: center;
   background:
     linear-gradient(135deg, rgba(184,137,90,0.15), rgba(192,138,138,0.2)),
-    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80") center/cover;
+    url("hero.jpeg") center/cover;
   color: #fff;
   padding: 2rem;
 }
