@@ -1,3 +1,16 @@
+// ───── Nav: darken on scroll + close mobile menu on link click ─────
+(function () {
+  const nav = document.querySelector('.site-nav');
+  window.addEventListener('scroll', function () {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+  document.querySelectorAll('.nav-links a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      nav.classList.remove('open');
+    });
+  });
+})();
+
 // ───── Hero Background Slideshow ─────
 (function () {
   const slides = document.querySelectorAll('.hero-bg');

@@ -64,6 +64,61 @@ body {
 .btn.primary { background: var(--accent-deep); color: #fff; }
 .btn.primary:hover { background: var(--ink); border-color: var(--ink); }
 
+/* ── Nav ── */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 2.5rem;
+  background: rgba(20, 13, 8, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: background 0.3s;
+}
+.site-nav.scrolled {
+  background: rgba(20, 13, 8, 0.92);
+}
+.nav-brand {
+  font-family: var(--script);
+  font-size: 1.8rem;
+  color: var(--gold);
+  text-decoration: none;
+  line-height: 1;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-family: var(--sans);
+  font-weight: 400;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0;
+}
+
 /* ── ① Hero ── */
 .hero {
   position: relative;
@@ -460,6 +515,22 @@ body {
 
 /* ── Mobile ── */
 @media (max-width: 700px) {
+  /* Nav */
+  .site-nav { padding: 0.75rem 1.25rem; }
+  .nav-toggle { display: block; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(20,13,8,0.96);
+    padding: 0.5rem 0 1rem;
+  }
+  .site-nav.open .nav-links { display: flex; }
+  .nav-links a { padding: 0.7rem 1.5rem; display: block; font-size: 0.85rem; }
   /* Hero */
   .hero { padding: 1.25rem; }
   .hero-content { padding: 0 0.5rem; }
