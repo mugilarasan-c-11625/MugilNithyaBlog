@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Wedding invitation of Mugil & Nithya" />
+  <title>Mugil &amp; Nithya · Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="kicker">With the blessings of our families</p>
+      <h1 class="couple">
+        <span>Mugil</span>
+        <span class="amp">&amp;</span>
+        <span>Nithya</span>
+      </h1>
+      <p class="tagline">are getting married</p>
+      <p class="date-band">SAVE THE DATE · 14 · 09 · 2026</p>
+      <a href="#details" class="scroll-cue" aria-label="Scroll to details">
+        <span></span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Invitation -->
+  <section class="section invite" id="invite">
+    <div class="ornament">❦</div>
+    <p class="invite-line">Together with their families</p>
+    <h2 class="names-stacked">
+      Mugil Vannan
+      <span class="and">&amp;</span>
+      Nithya Sri
+    </h2>
+    <p class="invite-line">
+      request the honour of your presence<br />
+      as they begin their journey together
+    </p>
+  </section>
+
+  <!-- Story -->
+  <section class="section story">
+    <h2 class="section-title">Our Story</h2>
+    <p class="section-sub">A few chapters from our journey</p>
+    <div class="timeline">
+      <div class="t-item">
+        <div class="t-year">2019</div>
+        <h3>How we met</h3>
+        <p>A simple hello that turned into endless conversations.</p>
+      </div>
+      <div class="t-item">
+        <div class="t-year">2022</div>
+        <h3>The proposal</h3>
+        <p>A quiet evening, two hearts, and a promise for forever.</p>
+      </div>
+      <div class="t-item">
+        <div class="t-year">2026</div>
+        <h3>The wedding</h3>
+        <p>Where our families and friends come together to celebrate us.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details -->
+  <section class="section details" id="details">
+    <h2 class="section-title">Wedding Events</h2>
+    <p class="section-sub">Join us in celebration</p>
+
+    <div class="events">
+      <article class="event-card">
+        <div class="event-icon">🌸</div>
+        <h3>Engagement</h3>
+        <p class="event-date">Sunday, 13 September 2026</p>
+        <p class="event-time">6:00 PM onwards</p>
+        <p class="event-venue">Venue Name<br />Address line, City</p>
+      </article>
+
+      <article class="event-card highlight">
+        <div class="event-icon">💍</div>
+        <h3>Wedding Ceremony</h3>
+        <p class="event-date">Monday, 14 September 2026</p>
+        <p class="event-time">Muhurtham · 7:30 AM</p>
+        <p class="event-venue">Venue Name<br />Address line, City</p>
+      </article>
+
+      <article class="event-card">
+        <div class="event-icon">🍽️</div>
+        <h3>Reception</h3>
+        <p class="event-date">Monday, 14 September 2026</p>
+        <p class="event-time">7:00 PM onwards</p>
+        <p class="event-venue">Venue Name<br />Address line, City</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Countdown -->
+  <section class="section countdown-sec">
+    <h2 class="section-title">Counting Down</h2>
+    <p class="section-sub">Until we say "I do"</p>
+    <div class="countdown" id="countdown" aria-live="polite">
+      <div><strong id="cd-days">0</strong><span>Days</span></div>
+      <div><strong id="cd-hours">0</strong><span>Hours</span></div>
+      <div><strong id="cd-mins">0</strong><span>Minutes</span></div>
+      <div><strong id="cd-secs">0</strong><span>Seconds</span></div>
+    </div>
+  </section>
+
+  <!-- Venue / Map -->
+  <section class="section venue">
+    <h2 class="section-title">Find Us</h2>
+    <p class="section-sub">Directions to the venue</p>
+    <div class="map-wrap">
+      <iframe
+        title="Wedding venue location"
+        src="https://www.google.com/maps?q=Chennai&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+    </div>
+    <a class="btn" href="https://maps.google.com/?q=Chennai" target="_blank" rel="noopener">Open in Google Maps</a>
+  </section>
+
+  <!-- RSVP -->
+  <section class="section rsvp" id="rsvp">
+    <h2 class="section-title">RSVP</h2>
+    <p class="section-sub">Kindly respond by 31 August 2026</p>
+    <form class="rsvp-form" onsubmit="return handleRSVP(event)">
+      <label>
+        Your Name
+        <input type="text" name="name" required placeholder="Full name" />
+      </label>
+      <label>
+        Phone / Email
+        <input type="text" name="contact" required placeholder="How can we reach you?" />
+      </label>
+      <label>
+        Number of Guests
+        <input type="number" name="guests" min="1" max="10" value="1" required />
+      </label>
+      <label>
+        Will you attend?
+        <select name="attending" required>
+          <option value="yes">Joyfully accepts</option>
+          <option value="no">Regretfully declines</option>
+        </select>
+      </label>
+      <label class="full">
+        Message for the couple (optional)
+        <textarea name="message" rows="3" placeholder="Your wishes..."></textarea>
+      </label>
+      <button type="submit" class="btn primary">Send RSVP</button>
+      <p class="form-note" id="form-note"></p>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="ornament">❦</div>
+    <p class="thanks">With love and gratitude,</p>
+    <p class="signoff">Mugil &amp; Nithya</p>
+    <p class="copyright">© 2026 · mugilnithyadiaries.in</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
