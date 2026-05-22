@@ -145,12 +145,12 @@ body {
   z-index: 0;
 }
 .hero-bg.active { opacity: 1; }
-.hero-bg:nth-child(1) { background-image: url('bg1.jpg'); }
-.hero-bg:nth-child(2) { background-image: url('bg2.jpg'); }
-.hero-bg:nth-child(3) { background-image: url('bg3.jpg'); }
-.hero-bg:nth-child(4) { background-image: url('bg4.jpg'); }
-.hero-bg:nth-child(5) { background-image: url('bg5.jpg'); }
-.hero-bg:nth-child(6) { background-image: url('bg6.jpg'); }
+.hero-bg:nth-child(1) { background-image: url('Galleryy/bg1.jpg'); }
+.hero-bg:nth-child(2) { background-image: url('Galleryy/bg2.jpg'); }
+.hero-bg:nth-child(3) { background-image: url('Galleryy/bg3.jpg'); }
+.hero-bg:nth-child(4) { background-image: url('Galleryy/bg4.jpg'); }
+.hero-bg:nth-child(5) { background-image: url('Galleryy/bg5.jpg'); }
+.hero-bg:nth-child(6) { background-image: url('Galleryy/bg6.jpg'); }
 .hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(100deg,
