@@ -614,7 +614,6 @@ body {
   .hero-countdown > div { min-width: 58px; padding: 0.45rem 0.5rem; }
   .hero-countdown strong { font-size: 1.5rem; }
   /* Other sections */
-  .rsvp-form { grid-template-columns: 1fr; }
   .countdown > div { min-width: 70px; padding: 1rem 0.5rem; }
   .countdown strong { font-size: 2rem; }
   .event-card.highlight { transform: none; }

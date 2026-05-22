@@ -53,15 +53,3 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-// ───── RSVP (client-side; wire up to a backend / Google Form / Formspree) ─────
-function handleRSVP(e) {
-  e.preventDefault();
-  const form = e.target;
-  const data = Object.fromEntries(new FormData(form).entries());
-  console.log("RSVP submitted:", data);
-
-  const note = document.getElementById("form-note");
-  note.textContent = "Thank you, " + data.name + "! Your RSVP has been received. ❦";
-  form.reset();
-  return false;
-}

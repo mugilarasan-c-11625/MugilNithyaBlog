@@ -25,7 +25,6 @@
       <li><a href="#events">Events</a></li>
       <li><a href="#gallery">Our Gallery</a></li>
       <li><a href="#venue">Venues</a></li>
-      <li><a href="#rsvp">RSVP</a></li>
     </ul>
   </nav>
 
@@ -182,38 +181,6 @@
     </div>
   </section>
 
-  <!-- ⑧ RSVP -->
-  <section class="section rsvp-sec" id="rsvp">
-    <h2 class="section-title">RSVP</h2>
-    <p class="section-sub">Kindly respond by 25 May 2026</p>
-    <form class="rsvp-form" onsubmit="return handleRSVP(event)">
-      <label>
-        Your Name
-        <input type="text" name="name" required placeholder="Full name" />
-      </label>
-      <label>
-        Phone / Email
-        <input type="text" name="contact" required placeholder="How can we reach you?" />
-      </label>
-      <label>
-        Number of Guests
-        <input type="number" name="guests" min="1" max="10" value="1" required />
-      </label>
-      <label>
-        Will you attend?
-        <select name="attending" required>
-          <option value="yes">Joyfully accepts</option>
-          <option value="no">Regretfully declines</option>
-        </select>
-      </label>
-      <label class="full">
-        Message for the couple (optional)
-        <textarea name="message" rows="3" placeholder="Your wishes..."></textarea>
-      </label>
-      <button type="submit" class="btn primary">Send RSVP ❦</button>
-      <p class="form-note" id="form-note"></p>
-    </form>
-  </section>
 
   <!-- ⑨ Footer -->
   <footer class="footer">
