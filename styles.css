@@ -140,7 +140,10 @@ body {
   transition: opacity 1.2s ease;
   z-index: 0;
 }
-.hero-bg.active { opacity: 1; }
+.hero-bg.active {
+  opacity: 1;
+  background-image: url('hero.jpeg'); /* web */
+}
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -514,6 +517,7 @@ body {
 /* ── Mobile ── */
 @media (max-width: 700px) {
   /* Nav */
+  .hero-bg.active { background-image: url('hero-mobile.jpg'); } /* mobile bg */
   .site-nav { padding: 0 1.25rem; justify-content: space-between; background: rgba(20,13,8,0.75) !important; }
   .nav-toggle { display: block; padding: 0.75rem 0; }
   .nav-links {
