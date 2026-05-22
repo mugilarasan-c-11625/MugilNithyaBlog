@@ -1,5 +1,5 @@
 // ───── Wedding date: 14 September 2026, 07:30 IST ─────
-const WEDDING_DATE = new Date("2026-09-14T07:30:00+05:30").getTime();
+const WEDDING_DATE = new Date("2026-06-04T10:00:00+05:30").getTime();
 
 function pad(n) { return String(n).padStart(2, "0"); }
 
