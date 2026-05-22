@@ -493,6 +493,42 @@ body {
   min-height: 1.5em;
 }
 
+/* ─── Music Button ─── */
+.music-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--accent-deep);
+  color: #fff;
+  border: 2px solid var(--gold);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px var(--shadow);
+  transition: transform 0.2s, background 0.2s;
+}
+.music-btn:hover {
+  transform: scale(1.12);
+  background: var(--accent);
+}
+.music-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: opacity 0.3s;
+  user-select: none;
+}
+.music-icon.paused { opacity: 0.5; }
+@keyframes spin-note {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.music-icon.playing { animation: spin-note 4s linear infinite; }
+
 /* ── ⑨ Footer ── */
 .footer {
   text-align: center;
