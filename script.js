@@ -30,26 +30,24 @@ function pad(n) { return String(n).padStart(2, "0"); }
 function updateCountdown() {
   const now = Date.now();
   const diff = WEDDING_DATE - now;
-
   const el = (id) => document.getElementById(id);
 
-  if (diff <= 0) {
-    el("cd-days").textContent = "00";
-    el("cd-hours").textContent = "00";
-    el("cd-mins").textContent = "00";
-    el("cd-secs").textContent = "00";
-    return;
-  }
+  const days  = diff > 0 ? Math.floor(diff / (1000 * 60 * 60 * 24)) : 0;
+  const hours = diff > 0 ? Math.floor((diff / (1000 * 60 * 60)) % 24) : 0;
+  const mins  = diff > 0 ? Math.floor((diff / (1000 * 60)) % 60) : 0;
+  const secs  = diff > 0 ? Math.floor((diff / 1000) % 60) : 0;
 
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const mins = Math.floor((diff / (1000 * 60)) % 60);
-  const secs = Math.floor((diff / 1000) % 60);
+  // Hero countdown
+  if (el('h-days'))   el('h-days').textContent   = pad(days);
+  if (el('h-hours'))  el('h-hours').textContent  = pad(hours);
+  if (el('h-mins'))   el('h-mins').textContent   = pad(mins);
+  if (el('h-secs'))   el('h-secs').textContent   = pad(secs);
 
-  el("cd-days").textContent = pad(days);
-  el("cd-hours").textContent = pad(hours);
-  el("cd-mins").textContent = pad(mins);
-  el("cd-secs").textContent = pad(secs);
+  // Section countdown (if present)
+  if (el('cd-days'))  el('cd-days').textContent  = pad(days);
+  if (el('cd-hours')) el('cd-hours').textContent = pad(hours);
+  if (el('cd-mins'))  el('cd-mins').textContent  = pad(mins);
+  if (el('cd-secs'))  el('cd-secs').textContent  = pad(secs);
 }
 
 updateCountdown();
