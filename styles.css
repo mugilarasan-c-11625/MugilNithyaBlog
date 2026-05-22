@@ -144,7 +144,11 @@ body {
   transition: opacity 1.2s ease;
   z-index: 0;
 }
-.hero-bg.active { opacity: 1; background-image: url('hero.png'); }
+.hero-bg.active { opacity: 1; }
+.hero-bg:nth-child(1) { background-image: url('bg1.jpg'); }
+.hero-bg:nth-child(2) { background-image: url('bg2.jpg'); }
+.hero-bg:nth-child(3) { background-image: url('bg3.jpg'); }
+.hero-bg:nth-child(4) { background-image: url('bg4.jpg'); }
 .hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(100deg,
@@ -588,7 +592,7 @@ body {
 /* ── Mobile ── */
 @media (max-width: 700px) {
   /* Nav */
-  .hero-bg.active { background-image: url('hero-mobile.jpg'); }
+  .hero-bg:nth-child(1) { background-image: url('hero-mobile.jpg'); }
   .site-nav { padding: 0 1.25rem; justify-content: space-between; background: rgba(20,13,8,0.75) !important; }
   .nav-monogram { width: 36px; height: 36px; }
   .mono-m, .mono-n { font-size: 0.78rem; }
